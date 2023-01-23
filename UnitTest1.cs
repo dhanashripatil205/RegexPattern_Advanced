@@ -16,7 +16,7 @@ namespace TestProject1
                 bool actual = program.validname(name);
                 Assert.AreEqual(expected, actual);
             }
-            catch(InvalidCastException ex)
+            catch (InvalidCastException ex)
             {
                 Assert.AreEqual("invalid first name", ex.Message);
             }
