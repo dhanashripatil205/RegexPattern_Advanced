@@ -8,94 +8,158 @@ namespace TestProject1
         [TestMethod]
         public void UseCase1()
         {
-            string name = "Prerana";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validFirstname(name);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string name = "Dhanashri";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validname(name);
+                Assert.AreEqual(expected, actual);
+            }
+            catch(InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid first name", ex.Message);
+            }
         }
 
         [TestMethod]
         public void UseCase2()
         {
-            string lastname = "Kanekar";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validLastname(lastname);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string lastname = "KrishnaRa";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validlname(lastname);
+                Assert.AreEqual(expected, actual);
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Last name", ex.Message);
+            }
         }
 
         [TestMethod]
         public void UseCase3()
         {
-            string email = "abc.xyz@bl.co.in";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.valiEdmail(email);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string[] emails = new string[3] { "abc.xyz@bl.co.in", "b689@bl.co.in", "xhh56@bl.co" };
+
+                for (int i = 0; i < 3; i++)
+                {
+
+                    bool expected = true;
+                    demo program = new demo();
+                    bool actual = program.validmail(emails[i]);
+                    Assert.AreEqual(expected, actual);
+                }
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Email", ex.Message);
+            }
         }
 
         [TestMethod]
         public void UseCase4()
         {
-            string mobileno = "91 7385352622";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validmobileno(mobileno);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string mb = "91 9465962366";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validmobile(mb);
+                Assert.AreEqual(expected, actual);
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Mobile Number", ex.Message);
+            }
         }
-
         [TestMethod]
-
-
         public void UseCase5()
         {
-            string password = "Ppfuhefup";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validPassword1(password);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string password = "Godzilla";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validpwd1(password);
+                Assert.AreEqual(expected, actual);
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Password", ex.Message);
+            }
         }
 
         [TestMethod]
         public void UseCase6()
         {
-
-            string password = "Dwivediii";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validPassword2(password);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string password = "Preranaaa";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validpwd2(password);
+                Assert.AreEqual(expected, actual);
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Password", ex.Message);
+            }
         }
 
         [TestMethod]
         public void UseCase7()
         {
-            string password = "Krishna9";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validPassword3(password);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string password = "Prerana5";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validpwd3(password);
+                Assert.AreEqual(expected, actual);
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Password", ex.Message);
+            }
         }
 
         [TestMethod]
         public void UseCase8()
         {
-            string password = "Krishna#2";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.validPassword4(password);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string password = "Krishna#2";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validpwd(password);
+                Assert.AreEqual(expected, actual);
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Password", ex.Message);
+            }
         }
 
         [TestMethod]
         public void UseCase9()
         {
-            string email1 = "abc.xyz@gmail.com";
-            bool expected = true;
-            demo program = new demo();
-            bool actual = program.valiEdmail(email1);
-            Assert.AreEqual(expected, actual);
+            try
+            {
+                string email1 = "abc.xyz@gmail.com";
+                bool expected = true;
+                demo program = new demo();
+                bool actual = program.validmail(email1);
+                Assert.AreEqual(expected, actual);
+            }
+            catch (InvalidCastException ex)
+            {
+                Assert.AreEqual("invalid Password", ex.Message);
+            }
         }
     }
 }
